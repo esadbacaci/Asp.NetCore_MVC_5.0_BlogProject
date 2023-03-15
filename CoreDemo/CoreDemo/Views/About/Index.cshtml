@@ -1,0 +1,78 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<body>
+	<!--/main-->
+	<section class="main-content-w3layouts-agileits">
+		<div class="container">
+			<h3 class="tittle">Hakkımızda</h3>
+			<div class="row inner-sec">
+				<!--left-->
+				<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+					<div class="blog-grid-top">
+
+						<div class="blog_info_left_grid">
+						
+							<iframe width="773" height="435" src="https://www.youtube.com/embed/X9dhgBvcMo0" title="Bilsoft Yazılım Tanıtım Filmi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						
+						</div>
+						<h3>
+							Biz Kimiz
+						</h3>
+						@foreach (var item in Model)
+						{
+							
+						
+						<p>
+								2005 yılından beri bilişim sektöründe faaliyet gösteren firmamızın geliştirdiği Muhasebe programları, Türkiye genelinde 100.000'in üzerinde KOBİ tarafından kullanılmaktadır. Bilsoft Ön Muhasebe Programları, muhasebe bilgisi olmadan rahatlıkla kullanılabilecek şekilde kullanıcı dostu olarak geliştirilmiştir. Kullanımı kolay olmasının yanında, hafta sonu ve resmi tatiller de dahil olmak üzere kullanıcıların ihtiyaç duyduğunda 7/24 teknik servis hizmeti sunmaktayız.
+
+
+								Bilsoft olarak, KOBİ'lerin ihtiyaçlarına daha kapsamlı çözümler sunmak amacıyla muhasebe programlarını sürekli olarak geliştirmekte ve güncellemekteyiz. KOBİ'lerin ihtiyaçları doğrultusunda Ön Muhasebe programlarına entegre şekilde çalışan hızlı satış programı, e-dönüşüm (e-fatura, e-arşiv fatura, e-irsaliye, e-müstahsil) programı, personel takip programı, pazar yeri entegrasyonu ve teknik servis programı geliştirerek kullanıcılarımıza sunduk. Bilsoft, müşterilerine e-dönüşüm paketi kapsamında e-faturaya geçiş ve e-arşiv faturaya geçiş imkanı sunmaktadır.
+
+
+								KOBİ'lerin finansal süreçlerini, gelir giderlerini daha etkin, daha kolay ve daha güvenli şekilde yönetmelerini sağlamak amacıyla durmadan çalışıyoruz. %100 yerli ve milli imkânlarla geliştirdiğimiz programlarımızla kullanıcılarımıza sadece firma içindeki bilgisayarlardan veya çevrimiçi olarak internetin olduğu her yerde bilgisayar, tablet ve cep telefonu üzerinden finansal verilerini yönetme ve gelir giderlerini takip etme imkânı sunuyoruz.
+
+
+								Bilsoft, bugüne kadar elde ettiği yetenek ve tecrübeleri bugünün trendleri ile birleştirerek, kullanıcılarına yenilikçi çözümler sunmaya devam edecektir.
+
+
+@*						@item.AboutDetails1
+*@						</p>
+						}
+				
+					</div>
+					
+				</div>
+				<!--//left-->
+				<!--right-->
+				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+
+					<div class="right-blog-info text-left">
+						<div class="tech-btm">
+							<img src="~/CoreBlogTema/images/banner1.jpg" class="img-fluid" alt="">
+						</div>
+						
+						@await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+
+						@await Html.PartialAsync("~/Views/About/SocialMediaAbout.cshtml")
+				
+			
+
+						</div>
+
+				</aside>
+				<!--//right-->
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

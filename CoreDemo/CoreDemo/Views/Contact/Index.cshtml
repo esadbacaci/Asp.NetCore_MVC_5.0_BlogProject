@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<link href="~/CoreBlogTema/css/contact.css"rel='stylesheet'type='text/css'>
+
+<body>
+	
+
+	
+	<!--/main-->
+	<section class="main-content-w3layouts-agileits">
+
+		<h3 class="tittle">Bize Ulaşın</h3>
+		<p class="sub text-center">Düşünceleriniz Bizim İçin Kıymetli</p>
+	
+		<div class="contact-map inner-sec">
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.654375065489!2d31.173093915643303!3d40.83555473798393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d75e697cd0b9d%3A0xab59083122146a0a!2sBilsoft%20Yaz%C4%B1l%C4%B1m%20Operasyon%20Merkezi!5e0!3m2!1str!2str!4v1678791644970!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+					class="map" style="border:0" allowfullscreen=""></iframe>
+		</div>
+		<div class="ad-inf-sec bg-light">
+			<div class="container">
+				<div class="address row">
+
+					<div class="col-lg-4 address-grid">
+						<div class="row address-info">
+							<div class="col-md-4 address-left text-center">
+								<i class="far fa-map"></i>
+							</div>
+							<div class="col-md-8 address-right text-left">
+								<h6>Adres</h6>
+								<p>
+									Fevzi Çakmak Mh. D-100 Yanyol
+									No: 189 Merkez/Düzce
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-lg-4 address-grid">
+						<div class="row address-info">
+							<div class="col-md-4 address-left text-center">
+								<i class="far fa-envelope"></i>
+							</div>
+							<div class="col-md-8 address-right text-left">
+								<h6>Mail</h6>
+								<p>
+									E-mail :
+									<a href="mailto:bilgi@bilsoft.com"> bilgi@bilsoft.com</a>
+
+								</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-4 address-grid">
+						<div class="row address-info">
+							<div class="col-md-4 address-left text-center">
+								<i class="fas fa-mobile-alt"></i>
+							</div>
+							<div class="col-md-8 address-right text-left">
+								<h6>Telefon</h6>
+								<p>0(212)912 24 26</p>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="contact_grid_right">
+				<form action="#" method="post">
+					<div class="row contact_left_grid">
+						<div class="col-md-6 con-left">
+							<div class="form-group">
+								<label for="validationCustom01 my-2">Adınız</label>
+								<input class="form-control" type="text" name="ContactUserName" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlInput1">Mail Adresiniz</label>
+								<input class="form-control" type="email" name="ContactMail" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label for="validationCustom03 my-2">Konu</label>
+								<input class="form-control" type="text" name="ContactSubject" placeholder="" required="">
+							</div>
+						</div>
+						<div class="col-md-6 con-right">
+							<div class="form-group">
+								<label for="textarea">Mesaj</label>
+								<textarea id="textarea"name="ContactMessage" placeholder=""></textarea>
+							</div>
+							<input id="btn1" class="form-control" type="submit" value="Submit">
+
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!--//main-->
+	
+	<script>
+		$('#btn1').click(function () {
+			swal("Başarılı", "Mesajınız bize ulaşmıştır kısa süre içinde sizinle irtibata geçeceğiz", "success" StyleSheet:
+		});
+	</script>
+
+</body>
+
+</html>

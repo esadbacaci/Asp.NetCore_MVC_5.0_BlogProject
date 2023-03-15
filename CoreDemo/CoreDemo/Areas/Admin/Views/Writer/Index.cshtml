@@ -1,0 +1,47 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+
+@model IPagedList<EntityLayer.Concrete.Writer>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Yazar Listesi</h1>
+<br />
+<table class="table table-hover align-middle">
+
+
+<tr>
+    <th>#</th>
+    <th>Yazar Adı</th>
+    <th>Yazar Hakkında</th>
+    <th>Yazar Mail</th>
+    <th>Yazar Şifre</th>
+    <th></th>
+    
+</tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.WriterID</th>
+            <td>@item.WriterName</td>
+            <td>@item.WriterAbout</td>
+            <td>@item.WriterMail</td>
+            <td>@item.WriterPassword</td>
+
+            <td><a href="/Admin/Writer/WriterDelete/@item.WriterID"id="DeleteBtn" onclick="return confirm('Silmek istediğinize emin misiniz ?');" class="btn btn-danger">Sil</a></td>
+       
+             
+              
+
+        </tr>
+
+    }
+</table>
+<br />
+<br />
+<br />
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new{page}))
+<a href="/Admin/Writer/AddWriter/" class="btn btn-info">Yeni Yazar Ekle</a>

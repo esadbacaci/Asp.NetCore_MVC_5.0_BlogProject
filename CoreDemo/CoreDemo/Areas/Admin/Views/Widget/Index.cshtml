@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+       @await Component.InvokeAsync("Statistic1",new{id=ViewBag.i})
+        
+        @await Component.InvokeAsync("Statistic2",new{id=ViewBag.i})
+               
+        @await Component.InvokeAsync("Statistic4",new{id=ViewBag.i})
+       
+
+        </div>
+        
+</body>
+</html>
+
+

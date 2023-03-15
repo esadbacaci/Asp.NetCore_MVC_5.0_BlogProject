@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "ContactMessagesDetails";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+<h1>Mesaj Detayları</h1>
+<br />
+<br />
+
+@if (Model != null)
+{
+    @if (Model != null)
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Mesaj Detayı</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>ID:</strong> @Model.ContactID</li>
+                <li class="list-group-item"><strong>Kullanıcı Adı:</strong> @Model.ContactUserName</li>
+                <li class="list-group-item"><strong>Konu:</strong> @Model.ContactSubject</li>
+                <li class="list-group-item"><strong>E-posta:</strong> @Model.ContactMail</li>
+                <li class="list-group-item"><strong>Mesaj:</strong> @Model.ContactMessage</li>
+                <li class="list-group-item"><strong>Mesaj Tarihi:</strong> @Model.ContactDate</li>
+            </ul>
+        </div>
+    </div>
+}
+
+}
+
+
+

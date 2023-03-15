@@ -1,0 +1,79 @@
+﻿  <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                  
+                    
+                                <span class="block m-t-xs font-bold">Admin</span>
+                                <span class="text-muted text-xs block">Genel Yönetici</span>
+                          
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                                <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                                <li class="dropdown-divider"></li>
+                                 <li><a method="post" asp-controller="Logout" asp-action="Logout" class="nav-link">>Çıkış</a></li>
+                            </ul>
+                        </div>
+                     
+                    </li>
+            <li>
+                <a href="/Admin/Widget"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span>  </a>
+            </li>
+
+            <li>
+                <a href="/Admin/Category"><i class="fa fa-sitemap"></i> <span class="nav-label">Kategoriler</span>  </a>
+           </li>
+
+            <li>
+                <a href="/Admin/Writer"><i class="fa fa-group"></i> <span class="nav-label">Yazarlar</span>  </a>
+            </li> 
+            <li>
+                <a href="/Admin/Blog"><i class="fa fa-folder"></i> <span class="nav-label">Bloglar</span>  </a>
+            </li>
+
+                    <li>
+                        <a href="/Admin/Contact"><i class="fa fa-comment"></i> <span class="nav-label">Gelen Mesajlar</span></a>
+                    </li>
+
+
+                 @*  <li>
+                        <a href="metrics.html"><i class="fa fa-bell"></i> <span class="nav-label">Mesaj Gönder</span>  </a>
+                    </li>*@
+       @*     <li>
+                <a href="metrics.html"><i class="fa fa-phone"></i> <span class="nav-label">İletişim</span>  </a>
+            </li>*@
+         @*   <li>
+                <a href="metrics.html"><i class="fa fa-book"></i> <span class="nav-label">Hakkımızda</span>  </a>
+            </li>*@
+
+            <li>
+                <a href="/Blog/Index"><i class="fa fa-car"></i> <span class="nav-label">Siteyi Görüntüle</span>  </a>
+            </li>
+
+            <li>
+                <a href="/Admin/Blog/ExportDynamicExcelBlogList"><i class="fa fa-download"></i> <span class="nav-label">Blog Listesi İndir</span>  </a>
+
+            </li> 
+
+            <li>
+                <a href="/Admin/NewsLetter/ExportDynamicExcelBlogList"><i class="fa fa-download"></i> <span class="nav-label">Abone Listesi İndir</span>  </a>
+
+            </li>
+                
+                      <li>
+                <form method="post" asp-controller="Logout" asp-action="Logout" class="nav-link">
+                    <button type="submit" class="btn btn-block btn-lg btn-gradient-primary mt-4">
+                        <i class="mdi mdi-logout-variant mr-2"></i>Çıkış Yap
+                    </button>
+                </form>
+                
+                    </li>
+
+
+                 
+                </ul>
+
+            </div>
+        </nav>

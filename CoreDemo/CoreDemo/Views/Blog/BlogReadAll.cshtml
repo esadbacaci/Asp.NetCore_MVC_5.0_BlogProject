@@ -1,0 +1,125 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
+@{
+    ViewData["Title"] = "BlogDetails";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<body>
+
+	<!--//banner-->
+	<section class="banner-bottom">
+		<!--/blog-->
+		<div class="container">
+			<div class="row">
+				<!--left-->
+				<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+				@foreach (var item in Model)
+					{
+						<div class="blog-grid-top">
+							<div class="b-grid-top">
+								<div class="blog_info_left_grid">
+
+									<img src="@item.BlogImage" class="img-fluid" alt="" style="width:100%"><!--burada tildayı görmemesi için substring kulllandık-->
+								
+								</div>
+								<div class="blog-info-middle">
+									<ul>
+										<li>
+											<a href="#">
+												<i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyy"))
+											</a>
+										</li>
+										<li class="mx-2">
+										
+										<li>
+											<a href="#">
+												<i class="far fa-profile"></i>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+							<h3>
+								<a href="#">@item.BlogTitle</a>
+							</h3>
+							<p>
+								@Html.Raw(@item.BlogContent)
+							</p>
+						
+						</div>
+					}
+					
+				@*	@await Component.InvokeAsync("CommentListByBlog",new{id=ViewBag.i})*@
+
+					@*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
+
+			@*		@await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")*@
+				</div>
+				
+					
+				<!--//left-->
+				<!--right-->
+				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+					<div class="right-blog-info text-left">
+						<div class="tech-btm">
+							<img src="~/CoreBlogTema/images/banner1.jpg" class="img-fluid" alt="">
+						</div>
+
+						<h4>Bültene Abone Ol</h4>
+						@await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+
+						@await Component.InvokeAsync("CategoryList")
+
+						@await Html.PartialAsync("Partial1")
+						
+						@await Component.InvokeAsync("WriterLastBlog")
+
+
+
+						<div class="single-gd my-5 tech-btm">
+						BOŞ ALAN BLOGREADALL İÇİNDE
+						</div>
+						<div class="single-gd tech-btm">
+							<h4>Yazı Gelebilir</h4>
+							<div class="blog-grids">
+								<div class="blog-grid-left">
+								
+										<img src="~/CoreBlogTema/images/b1.jpg" class="img-fluid" alt="">
+								
+								</div>
+								<div class="blog-grid-right">
+
+								
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+
+				</aside>
+				<!--//right-->
+			</div>
+		</div>
+	</section>
+
+
+
+	
+
+</body>
+
+</html>
+

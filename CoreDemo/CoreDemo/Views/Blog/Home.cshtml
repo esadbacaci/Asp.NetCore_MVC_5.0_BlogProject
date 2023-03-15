@@ -1,0 +1,196 @@
+﻿@using EntityLayer.Concrete
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@model X.PagedList.PagedList<EntityLayer.Concrete.Blog>
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+	<div class="banner">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="carousel-caption">
+						<h3>Create the lifestyle
+							<span>you desire</span>
+						</h3>
+						<div class="read">
+							<a href="single.html" class="btn btn-primary read-m">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item item2">
+					<div class="carousel-caption">
+						<h3>Engaging Purposeful
+							<span>and Creative</span>
+						</h3>
+						<div class="read">
+							<a href="single.html" class="btn btn-primary read-m">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item item3">
+					<div class="carousel-caption">
+						<h3>Create the lifestyle
+							<span>you desire</span>
+						</h3>
+						<div class="read">
+							<a href="#" class="btn btn-primary read-m">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item item4">
+					<div class="carousel-caption">
+						<h3>Engaging Purposeful
+							<span>and Creative</span>
+						</h3>
+						<div class="read">
+							<a href="single.html" class="btn btn-primary read-m">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+
+<section class="main-content-w3layouts-agileits">
+	<div class="container">
+		
+		<div class="row inner-sec">
+			<!--left-->
+			<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+
+
+				@foreach (var item in Model.OrderByDescending(m => m.BlogID))
+				{
+		
+				<article class="blog-grid-top">
+					<div class="b-grid-top">
+						<div class="blog_info_left_grid">
+								<a href="/Blog/BlogReadAll/@item.BlogID">
+									<img src="@item.BlogImage" class="img-fluid" alt="" style="width:100%">
+							</a>
+						</div>
+						<div class="blog-info-middle">
+							<ul>
+								<li>
+									<a href="#">
+											<i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyy"))
+									</a>
+								</li>
+								<li class="mx-2">
+									<a href="#">
+										@item.Category.CategoryName
+									</a>
+								</li>
+								<li>
+								@*	<a href="#">
+										<i class="far fa-comment"></i>
+									</a>*@
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<h3>
+							<a href="/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle </a>
+					</h3>
+						@* <p class="card-text mb-8">@Html.Raw((@item.BlogContent).Substring(0,item.BlogContent.Substring(0,300).LastIndexOf(" ")))... </p> *@						
+						<a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-primary read-m">Devamını Oku</a>
+				</article>
+				}
+
+
+@*pagination*@
+<br />
+<br />
+				<style>
+
+					.pagination-container .page-item > a.page-link {
+						color: #fff;
+						background-color: #f58320;
+						border-color: #f58320;
+						border: 1px solid #fff;
+					}
+
+						.pagination-container .page-item > a.page-link:hover {
+							background-color: darkorange ;
+							border-color: darkorange;
+						}
+
+					.pagination-container .page-item.active > span.page-link {
+						color: #fff;
+						background-color: darkorange;
+						border-color: darkorange;
+						border: 1px solid #fff;
+					}
+				</style>
+<div class="pagination-container">
+	<ul class="pagination justify-content-center">
+		@if (Model.PageNumber != 1)
+		{
+			<li class="page-item"><a class="page-link" href="@Url.Action("Home", new { page = Model.PageNumber - 1 })">Önceki</a></li>
+		}
+
+		@for (int i = 1; i <= Model.PageCount; i++)
+		{
+			if (Model.PageNumber == i)
+			{
+				<li class="page-item active"><span class="page-link">@i</span></li>
+			}
+			else
+			{
+				<li class="page-item"><a class="page-link" href="@Url.Action("Home", new { page = i })">@i</a></li>
+			}
+		}
+
+		@if (Model.PageNumber != Model.PageCount)
+		{
+			<li class="page-item"><a class="page-link" href="@Url.Action("Home", new { page = Model.PageNumber + 1 })">Sonraki</a></li>
+		}
+	</ul>
+</div>
+
+			</div>
+			<!--//left-->
+			<!--right-->
+			<aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
+				<div class="right-blog-info text-left">
+					
+					@await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+
+					@await Component.InvokeAsync("WriterLastBlog")
+
+					@await Component.InvokeAsync("CategoryList")
+
+					@await Html.PartialAsync("Partial1")
+				
+
+						</div>
+
+
+			</aside>
+			<!--//right-->
+		</div>
+
+	</div>
+
+</section>
+
+
+

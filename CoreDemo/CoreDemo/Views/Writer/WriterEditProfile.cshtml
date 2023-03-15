@@ -1,0 +1,56 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewData["Title"] = "WriterEditProfile";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Yazar Güncelleme</h1>
+@using (Html.BeginForm("WriterEditProfile","Writer",FormMethod.Post))
+{
+
+   
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <small class="text-danger">Lütfen Bilgilerinizi Güncellemek İçin Doğru Şifreyi Girdiğinizden Emin Olunuz</small>
+                <br>
+                <br>
+                <h4 class="card-title">Yazar Hakkında</h4>
+                <br>
+                @Html.HiddenFor(x=>x.WriterID,new{@class="form-control"})
+            
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Ad Soyad</label>
+                     @Html.TextBoxFor(x=>x.WriterName,new{@class="form-control"})
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Mail Adresi</label>
+                        @Html.TextBoxFor(x=>x.WriterMail,new{@class="form-control"})
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Şifre</label>
+                        @Html.PasswordFor(x=>x.WriterPassword,new{@class="form-control"})
+                    </div>
+                   @* <div class="form-group">
+                        <label>Yazar Görsel</label>
+                        <input type="file" name="WriterImage" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                            <input type="file" name="WriterImage" class="form-control file-upload-info" enabled placeholder="Upload Image">
+                          
+                        </div>
+                    </div>*@
+             
+                    <div class="form-group">
+                        <label for="exampleTextarea1">Yazar Hakkında</label>
+                        @Html.TextAreaFor(x=>x.WriterAbout,15,3,new{@class="form-control"})
+                    </div>
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Güncelle</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+}
+

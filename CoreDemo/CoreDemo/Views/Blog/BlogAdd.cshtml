@@ -1,0 +1,48 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewData["Title"] = "BlogAdd";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+<script src="~/ckeditor/ckeditor.js"></script>
+<h1>Yeni Blog Yaz</h1>
+<br />
+<br />
+
+@using (Html.BeginForm("BlogAdd", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Blog Başlığı")
+    @Html.TextBoxFor(x=>x.BlogTitle,new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogTitle)
+
+    <br />
+
+    @Html.Label("Blog Görseli")
+    <input type="file" name="BlogImage" class="form-control" />
+    @Html.ValidationMessageFor(x => x.BlogImage)   
+        
+    <br />
+
+ @*   @Html.Label("Blog Küçük Görseli")
+    @Html.TextBoxFor(x=>x.BlogThumbnailImage,new {@class="form-control"})
+
+    <br />
+*@
+    @Html.Label("Blog Kategori")
+    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.cv,new {@class="form-control"})
+
+    <br />
+
+    @Html.Label("Blog İçerik")
+    @Html.TextAreaFor(x=>x.BlogContent,15,3, new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogContent)
+   
+
+    <br />
+    <br />
+
+    <button class="btn btn-info">Yayınla</button>
+    <script>
+        CKEDITOR.replace('BlogContent');
+    </script>
+}
+
