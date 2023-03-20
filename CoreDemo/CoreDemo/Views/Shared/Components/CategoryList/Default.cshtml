@@ -1,19 +1,35 @@
 ﻿@model IEnumerable<EntityLayer.Concrete.Category>
 
-	<div class="tech-btm">
+<div class="tech-btm">
 	<a href="/Blog/Index">
 		<h4>Kategoriler</h4>
 	</a>
-							<ul class="list-group single">
-								@foreach (var item in Model)
+	<ul class="list-group single">
+		@foreach (var item in Model)
 		{
-			
-							<li class="list-group-item d-flex justify-content-between align-items-center">
-									<a style="color:#00488e" href="/Blog/Index">@item.CategoryName </a>
-									<span class="badge badge-primary badge-pill"></span>
-								</li>
-			
+			<li class="list-group-item d-flex justify-content-between align-items-center">
+				<a href="/Blog/Index" class="category-link">@item.CategoryName</a>
+				<span class="badge badge-primary badge-pill"></span>
+			</li>
 		}
 
 	</ul>
-	</div>
+</div>
+<style>
+	.tech-title {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.category-link {
+color: #00488e;
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.category-link:hover {
+color: darkorange;
+}
+</style>

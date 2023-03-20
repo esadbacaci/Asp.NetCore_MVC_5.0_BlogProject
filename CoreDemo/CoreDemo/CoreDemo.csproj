@@ -32,7 +32,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\NewsLetter\" />
-    <Folder Include="Areas\Test\" />
     <Folder Include="wwwroot\images\icon\" />
     <Folder Include="wwwroot\WriterImageFiles\" />
   </ItemGroup>

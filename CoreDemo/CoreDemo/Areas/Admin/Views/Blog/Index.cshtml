@@ -1,6 +1,7 @@
 ﻿@using X.PagedList;
 @using X.PagedList.Mvc.Core;
 
+
 @model IPagedList<EntityLayer.Concrete.Blog>
 @{
 	ViewData["Title"] = "Index";
@@ -17,8 +18,9 @@
 				<th scope="col">Blog Başlığı</th>
 				<th scope="col">Blog Tarihi</th>
 				<th scope="col">Blog Açıklama</th>
+				<th scope="col">Yazar ID</th>
 				<th scope="col">Blog Görsel</th>
-				<th scope="col"></th>
+				
 			</tr>
 		</thead>
 		<tbody>
@@ -29,6 +31,7 @@
 					<td>@item.BlogTitle</td>
 					<td>@item.BlogCreateDate</td>
 					<td>@Html.Raw(@item.BlogContent)</td>
+					<td>@item.WriterID</td>
 					<td><img src="@item.BlogImage" alt="Blog Görseli" class="img-thumbnail"></td>
 					<td><a href="/Admin/Blog/DeleteBlog/@item.BlogID" onclick="return confirm('Silmek istediğinize emin misiniz ?');" class="btn btn-danger">Sil</a></td>
 				</tr>

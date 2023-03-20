@@ -17,8 +17,8 @@
                 <br>
                 <h4 class="card-title">Yazar Hakkında</h4>
                 <br>
-                @Html.HiddenFor(x=>x.WriterID,new{@class="form-control"})
-            
+                @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control", @readonly = "readonly" })
+                <br>
                 <form class="forms-sample">
                     <div class="form-group">
                         <label for="exampleInputName1">Ad Soyad</label>

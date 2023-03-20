@@ -40,9 +40,9 @@ namespace CoreDemo.Controllers
         }
 		public IActionResult Home(int page = 1)
 		{
-			var values = bm.GetBlogListWithCategory().ToPagedList(page,3);
-		
-			return View(values);
+            var values = bm.GetBlogListWithCategory().OrderByDescending(x => x.BlogID).ToPagedList(page, 3);
+
+            return View(values);
 		}
 		public IActionResult BlogReadAll(int id)
         {
@@ -55,8 +55,7 @@ namespace CoreDemo.Controllers
         {
       
             var usermail = User.Identity.Name;
-            var writerID=c.Writers.Where(x=>x.WriterMail==
-            usermail).Select(y=>y.WriterID).FirstOrDefault();
+            var writerID=c.Writers.Where(x=>x.WriterMail== usermail).Select(y=>y.WriterID).FirstOrDefault();
             var values = bm.GetListWithCategoryByWriterBm(writerID);
             return View(values); 
         }

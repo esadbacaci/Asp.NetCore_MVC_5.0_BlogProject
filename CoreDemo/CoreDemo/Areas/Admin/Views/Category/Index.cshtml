@@ -7,9 +7,10 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1>Yazar Listesi</h1>
+<h1>Kategori Listesi</h1>
 <br />
-<table class="table table-bordered">
+<div class="table-responsive">
+    <table class="table table-hover">
 
 
     <tr>
@@ -29,7 +30,7 @@
             <td>@item.CategoryeDescription</td>
             
 
-            <td><a href="/Admin/Category/CategoryDelete/@item.CategoryID" id="DeleteBtn" onclick="return confirm('Silmek istediğinize emin misiniz ?');" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/Category/CategoryDelete/@item.CategoryID" id="DeleteBtn" onclick="return confirm('Eğer kategoriyi silerseniz bu kategoriye ait tüm bloglar silinecektir, bu işlemi onaylıyor musunuz ?');" class="btn btn-danger">Sil</a></td>
          
 
 
@@ -37,6 +38,7 @@
         </tr>
     }
 </table>
+</div>
 <br />
 <br />
 <br />

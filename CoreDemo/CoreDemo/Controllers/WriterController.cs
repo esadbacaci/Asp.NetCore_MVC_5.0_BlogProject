@@ -25,8 +25,7 @@ namespace CoreDemo.Controllers
             var usermail = User.Identity.Name;
             ViewBag.v = usermail;
             Context c = new Context();
-            var writerName = c.Writers.Where(x => x.WriterMail == usermail)
-                .Select(y => y.WriterName).FirstOrDefault();
+            var writerName = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
             ViewBag.v2 = writerName;
             return View();
         }

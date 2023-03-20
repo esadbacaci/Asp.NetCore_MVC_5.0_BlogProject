@@ -1,4 +1,5 @@
 ﻿@using EntityLayer.Concrete
+@using System.Text.RegularExpressions;
 @model MyViewModel
 @{
     ViewData["Title"] = "Index";
@@ -8,6 +9,14 @@
 
 
 <style>
+	.card-img-topp {
+		height: 250px; /* Tüm görsellerin aynı yükseklikte görüntülenmesi için */
+	}
+
+	.card-body {
+		height: 100%; /* Tüm kartların aynı yükseklikte olması için */
+	}
+
 .btn {
   background-color: #00488E;
   color: white;
@@ -52,6 +61,11 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+	.card-text {
+		height: 135px;
+		overflow: hidden;
+		text-overflow: ellipsis;
 </style>
 
 
@@ -71,11 +85,11 @@
 
 
 
-<h3 class="tittle">Bloglarımız</h3>
+<h3 style="position:relative;top:5%" class="tittle">Bloglarımız</h3>
 <section class="main-content-w3layouts-agileits">
-		<div class="container">
-		
-			<div class="inner-sec">
+		<div  class="container">
+
+		<div style=" position:relative;top:-10%">
 				<!--left-->
 				<div class="left-blog-info-w3layouts-agileits text-left">
 					<div class="row">
@@ -84,7 +98,7 @@
 						
 						<div class="col-lg-4 card filterDiv @item.Category.CategoryName">
 							<a href="/Blog/BlogReadAll/@item.BlogID">
-								<img src="@item.BlogImage" class="card-img-top img-fluid" alt="">
+								<img src="@item.BlogImage" class="card-img-topp img-fluid" alt="">
 							</a>
 
 							<div class="card-body">
@@ -109,13 +123,25 @@
 								<h5 class="card-title">
 									<a href="/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle</a>
 								</h5>
-							@*	<p class="card-text mb-3">@Html.Raw((@item.BlogContent).Substring(0,item.BlogContent.Substring(0,130).LastIndexOf(" ")))... </p>*@
+								@{
+									// HTML etiketlerini kaldırmak için Regex kullanımı
+									string contentWithoutHtml = Regex.Replace(item.BlogContent, @"<[^>]+>|&nbsp;", "").Trim();
+									// İlk 300 karakterin alınması
+									string blogSummary = contentWithoutHtml.Length > 300 ? contentWithoutHtml.Substring(0, 150) : contentWithoutHtml;
+									// Son kelimenin tamamının alınması
+									blogSummary = blogSummary.Substring(0, blogSummary.LastIndexOf(" "));
+								}
+								
+									<p class="card-text mb-8">@blogSummary...</p>
+				
 								<a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-primary read-m">Devamını Oku</a>
+								
 							</div>
+							<br>
 						</div>
 
 						}
-					
+
 					<!--//left-->
 				</div>
 			</div>

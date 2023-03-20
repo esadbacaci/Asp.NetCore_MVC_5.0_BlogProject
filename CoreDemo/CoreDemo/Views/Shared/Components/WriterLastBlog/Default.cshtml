@@ -1,30 +1,34 @@
 ﻿@using EntityLayer.Concrete
 @model List<Blog>
 
+	
 <div class="tech-btm">
 	<h4>Diğer Bloglar</h4>
 
-	<div class="blog-grids row mb-3">
+	<div class="row row-cols-1 row-cols-md-2 g-4">
+@*		@foreach (var item in Model.Skip(Math.Max(0, Model.Count() - 4)))
 
-		@foreach (var item in Model.Skip(Math.Max(0, Model.Count() - 5)))
-
-		{
-		<div class="col-md-5 blog-grid-left">
-				<a href="/Blog/BlogReadAll/@item.BlogID">
-					<img src="@item.BlogImage" class="img-fluid" alt="">
-			</a>
-		</div>
-		<div class="col-md-7 blog-grid-right">
-
-			<h5>
-					<a href="/Blog/BlogReadAll/@item.BlogID" >@item.BlogTitle </a>
-			</h5>
-			<div class="sub-meta">
-				<span>
-						<i class="far fa-clock"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyy"))
-				</span>
+*@	
+@foreach (var item in Model.OrderBy(x => Guid.NewGuid()).Take(2))
+{
+			<div class="col">
+				<div class="card h-100">
+					<a href="/Blog/BlogReadAll/@item.BlogID">
+						<img src="@item.BlogImage" class="card-img-top" alt="">
+					</a>
+					<div class="card-body">
+						<h5 class="card-title">
+							<a href="/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle</a>
+						</h5>
+						<div class="sub-meta mb-3">
+							<span>
+								<i class="far fa-clock"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyy"))
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
 		}
-	</div>
+</div>
+
 </div>
