@@ -1,2 +1,8 @@
 # Asp.Net-Core-MVC-5.0-Blog-Project
-Asp.net core project
+asp.net core mvc project
+(partialview, layouts, viewcomponents, entityframework, roles, mssql)
+
+Features
+-Blog/Category/Writer/Admin  Add-Update-Delete
+-Roles = Admin - Writer
+-Writer panel and Admin Panel
