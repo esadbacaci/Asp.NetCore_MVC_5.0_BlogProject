@@ -30,7 +30,8 @@ namespace CoreDemo.Controllers
             {
                 var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name,p.UserName)
+            new Claim(ClaimTypes.Name,p.UserName),
+            new Claim(ClaimTypes.Role,"Admin")
         };
                 var useridentity = new ClaimsIdentity(claims, "a");
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);

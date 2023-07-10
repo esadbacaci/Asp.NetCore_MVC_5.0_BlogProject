@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace CoreDemo.Controllers
 {
+    [Authorize(Roles = "Writer")]
+
     public class DashboardController : Controller
     {
     
@@ -23,5 +25,6 @@ namespace CoreDemo.Controllers
           
             return View();
         }
+
     }
 }

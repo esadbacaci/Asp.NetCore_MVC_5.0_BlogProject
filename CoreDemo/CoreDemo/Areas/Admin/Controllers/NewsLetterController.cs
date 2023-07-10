@@ -2,6 +2,7 @@
 using CoreDemo.Areas.Admin.Models;
 using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
@@ -10,6 +11,8 @@ using System.Linq;
 namespace CoreDemo.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class NewsLetterController : Controller
     {
         public IActionResult ExportDynamicExcelBlogList()

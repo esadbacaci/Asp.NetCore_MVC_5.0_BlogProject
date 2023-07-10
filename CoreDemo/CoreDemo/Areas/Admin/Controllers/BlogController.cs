@@ -15,6 +15,7 @@ namespace CoreDemo.Areas.Admin.Controllers
 {
   
     [Area("Admin")]
+    [Authorize(Roles="Admin")]
     public class BlogController : Controller
     {
 
@@ -64,7 +65,7 @@ namespace CoreDemo.Areas.Admin.Controllers
 
         public IActionResult Index(int page = 1)
 		{
-			var values = bm.GetList().ToPagedList(page, 2);
+			var values = bm.GetList().OrderByDescending(x => x.BlogID).ToPagedList(page, 2);
 			return View(values);
 		}
 		public IActionResult DeleteBlog(int id)

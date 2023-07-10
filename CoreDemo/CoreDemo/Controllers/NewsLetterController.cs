@@ -13,8 +13,9 @@ using System.Linq;
 
 namespace CoreDemo.Controllers
 {
+    [Authorize(Roles = "Writer")]
 
-	public class NewsLetterController : Controller
+    public class NewsLetterController : Controller
 	{
 		NewsLetterManager nm = new NewsLetterManager(new EFNewsLetterRepository());
         [AllowAnonymous]

@@ -1,5 +1,4 @@
-﻿
-using BusinessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
@@ -17,6 +16,8 @@ namespace CoreDemo.Areas.Admin.Controllers
 {
     
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class CategoryController : Controller
     {
         CategoryManager cm = new CategoryManager(new EFCategoryRepository());

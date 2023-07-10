@@ -1,24 +1,14 @@
-﻿using BusinessLayer.Concrete;
-using DataAccessLayer.EntityFramework;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDemo.Controllers
 {
-    [AllowAnonymous]
-
     public class AboutController : Controller
     {
-        AboutManager abm = new AboutManager(new EFAboutRepository());
+        [AllowAnonymous]
         public IActionResult Index()
         {
-			var values = abm.GetList();
-			return View(values);
+            return View();
         }
-        public PartialViewResult SocialMediaAbout()
-        {
-            return PartialView();
-        }
-
     }
 }

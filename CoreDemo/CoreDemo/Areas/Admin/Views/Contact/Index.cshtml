@@ -1,4 +1,6 @@
-﻿
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@model IEnumerable<EntityLayer.Concrete.Contact>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -17,7 +19,7 @@
 	
 		<th></th>
 	</tr>
-	@foreach (var item in Model)
+	@foreach (var item in Model.OrderByDescending(m=>m.ContactID))
 	{
 		<tr>
 			<td>@item.ContactID</td>
@@ -31,4 +33,6 @@
 
 		</tr>
 	}
+
 </table>
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new{page}))

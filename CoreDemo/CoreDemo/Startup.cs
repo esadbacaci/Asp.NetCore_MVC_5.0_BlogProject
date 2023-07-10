@@ -28,9 +28,6 @@ namespace CoreDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-		
-
 			services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -50,11 +47,13 @@ namespace CoreDemo
  {
      options.LoginPath = "/Admin/Index"; // Admin rolüne sahip kullanýcýlarý yönlendireceðimiz login sayfasý
      options.AccessDeniedPath = "/Admin/Index";
+	 options.ExpireTimeSpan = TimeSpan.FromHours(1);
  })
  .AddCookie("UserScheme", options =>
  {
      options.LoginPath = "/Login/Index"; // User rolüne sahip kullanýcýlarý yönlendireceðimiz login sayfasý
      options.AccessDeniedPath = "/Login/Index";
+	 options.ExpireTimeSpan = TimeSpan.FromHours(1);
  });
 
         }

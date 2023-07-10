@@ -1,0 +1,11 @@
+﻿
+@media (max-width: 768px) {
+    .bilsoftbanner {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .sliderbanner {
+        display: none;
+    }
+}

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\CoreDemo\\CoreDemo.csproj": {}
+    "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\CoreDemo\\CoreDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\bcces\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Muhammed Esad Bacacı\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bcces\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Muhammed Esad Bacacı\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -71,30 +67,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\CoreDemo\\CoreDemo.csproj": {
+    "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\CoreDemo\\CoreDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
         "projectName": "CoreDemo",
-        "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
-        "packagesPath": "C:\\Users\\bcces\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\CoreDemo\\obj\\",
+        "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
+        "packagesPath": "C:\\Users\\Muhammed Esad Bacacı\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\CoreDemo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bcces\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Muhammed Esad Bacacı\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,20 +108,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -141,6 +148,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[10.3.3, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -186,6 +197,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -194,25 +223,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\bcces\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Muhammed Esad Bacacı\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bcces\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Muhammed Esad Bacacı\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -226,8 +251,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -261,6 +286,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.9, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -274,30 +303,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\bcces\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcces\\Desktop\\x\\CoreDemo\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Muhammed Esad Bacacı\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammed Esad Bacacı\\Desktop\\CoreDemo\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bcces\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Muhammed Esad Bacacı\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -339,12 +378,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

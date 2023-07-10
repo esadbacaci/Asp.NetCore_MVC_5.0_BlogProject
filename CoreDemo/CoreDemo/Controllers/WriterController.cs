@@ -58,31 +58,6 @@ namespace CoreDemo.Controllers
         [HttpGet]
         public IActionResult WriterEditProfile(Writer p,IFormFile WriterImage)
         {
-
-
-            //if (WriterImage != null && WriterImage.Length > 0)
-            //{
-            //    // dosya adı ve uzantısı
-            //    var fileName = Path.GetFileName(WriterImage.FileName);
-            //    var fileExtension = Path.GetExtension(fileName);
-
-            //    // dosya adı değiştirme
-            //    var newFileName = Guid.NewGuid() + fileExtension;
-
-            //    // dosya kaydedilme yolu
-            //    var location = Directory.GetCurrentDirectory();
-            //    var path = Path.Combine(location, "wwwroot/images/", newFileName);
-
-            //    // dosyayı kaydetme
-            //    using (var stream = new FileStream(path, FileMode.Create))
-            //    {
-            //        WriterImage.CopyTo(stream);
-            //    }
-
-            //    // veritabanına kaydetme
-            //    p.WriterImage = "/images/" + newFileName;
-            //}
-
             Context c = new Context();
             var usermail = User.Identity.Name;
             var writerID = c.Writers.Where(x => x.WriterMail == usermail)

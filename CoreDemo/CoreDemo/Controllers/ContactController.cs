@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace CoreDemo.Controllers
 {
-    
+
 
     public class ContactController : Controller
 	{
@@ -27,10 +27,11 @@ namespace CoreDemo.Controllers
 			p.ContactDate=DateTime.Now;
 			p.ContectStatus = true;
 			cm.TAdd(p);
-            Thread.Sleep(5000);
-            return RedirectToAction("Index","Blog");
+		
+			return RedirectToAction("Index","Blog");
 		}
 
+        [Authorize(Roles = "Writer")]
 
         public IActionResult ContactMessages()
         {
